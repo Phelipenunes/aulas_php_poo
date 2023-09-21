@@ -11,6 +11,8 @@
     <h2>Assuntos aboradados:</h2>
     <ul>
         <li>Criação de classe</li>
+        <li>Importando do arquivo de classe</li>
+        <li>Crian</li>
     </ul>
 
 <?php
