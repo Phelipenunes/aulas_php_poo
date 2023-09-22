@@ -13,6 +13,7 @@
         <li>Acesso direto ás propiedades</li>
         <li>Atribuição e leitura de dados</li>
         <li>Chamada de métodos</li>
+        <li>Uso do<code>$this</code> para acessar recursos dentro da própia classe</li>
     </ul>
 
 <?php
@@ -43,6 +44,12 @@ $cliente2->senha =password_hash("1234pilip", PASSWORD_DEFAULT);
 <h3>Nome:<?=$cliente2->nome?></h3>
 <h3>E-mail:<?=$cliente2->email?></h3>   
 <h3>Telefones:<?=$cliente2->telefones[0]?>,<?=$cliente1->telefones[1]?></h3>
+
+<hr>
+
+<h2>Acessando dados através de um método </h2>
+<?=$cliente1->exibirdados()?>
+<?=$cliente2->exibirdados()?>
 
   
 
