@@ -37,5 +37,6 @@ $cliente2->senha =password_hash("1234pilip", PASSWORD_DEFAULT);
 <h3><?=$cliente1->nome?></h3>
 <h3><?=$cliente2->nome?></h3>    
 
+<pre><?=var_dump($cliente1,$cliente2)?></pre>
 </body>
 </html>
