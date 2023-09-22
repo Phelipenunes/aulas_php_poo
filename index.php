@@ -33,9 +33,19 @@ $cliente2->senha =password_hash("1234pilip", PASSWORD_DEFAULT);
 
 ?>
 <hr>
-<h2>Dados dos objetos</h2>
-<h3><?=$cliente1->nome?></h3>
-<h3><?=$cliente2->nome?></h3>    
+<h2>Dados dos objetos(Cliente 1)</h2>
+<h3>Nome:<?=$cliente1->nome?></h3>
+<h3>E-mail:<?=$cliente1->email?></h3>   
+<h3>Telefones:<?=$cliente1->telefones[0]?>,<?=$cliente1->telefones[1]?></h3>   
+
+<hr>
+<h2>Dados dos objetos (Cliente 2)</h2>
+<h3>Nome:<?=$cliente2->nome?></h3>
+<h3>E-mail:<?=$cliente2->email?></h3>   
+<h3>Telefones:<?=$cliente2->telefones[0]?>,<?=$cliente1->telefones[1]?></h3>
+
+  
+
 
 <pre><?=var_dump($cliente1,$cliente2)?></pre>
 </body>
