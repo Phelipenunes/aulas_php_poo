@@ -4,6 +4,7 @@ class Cliente{
     private string $nome;
     private string $email;
     private string $senha;
+    private string $situacao =  "a definir" ;
     
     //nome
     public function setNome(string $nome):void{
@@ -30,6 +31,19 @@ class Cliente{
 
     public function getSenha():string{
         return $this->senha;
+    }
+
+    
+    protected function getSituacao(): string
+    {
+        return $this->situacao;
+    }
+
+    protected function setSituacao(string $situacao): self
+    {
+        $this->situacao = $situacao;
+
+        return $this;
     }
 }
 
