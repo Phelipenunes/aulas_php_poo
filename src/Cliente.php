@@ -6,29 +6,29 @@ class Cliente{
     private string $senha;
     
     //nome
-    public function setnome(string $nome):void{
+    public function setNome(string $nome):void{
         $this->nome = $nome;
     }
 
-    public function getnome():string{
+    public function getNome():string{
         return $this->nome;
     }
 
     //email
-    public function setemail(string $email):void{
+    public function setEmail(string $email):void{
         $this->email = filter_var($email,FILTER_SANITIZE_EMAIL);
     }
 
-    public function getemail():string{
+    public function getEmail():string{
         return $this->email;
     }
 
     //senha
-    public function setsenha(string $senha):void{
+    public function setSenha(string $senha):void{
         $this->senha =password_hash($senha,PASSWORD_DEFAULT);
     }
 
-    public function getsenha():string{
+    public function getSenha():string{
         return $this->senha;
     }
 }

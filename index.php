@@ -20,13 +20,13 @@ $cliente1 = new Cliente;
 //$cliente1->nome = "pilip"
 
 //Usando setter para atribuir um valor à propiedade privada"nome"
-$cliente1->setnome("pilip");
-$cliente1->setemail("pilip@gmail.com");
-$cliente1->setsenha("123abc");
+$cliente1->setNome("pilip");
+$cliente1->setEmail("pilip@gmail.com");
+$cliente1->setSenha("123abc");
 ?>
-<p>Nome:<?=$cliente1->getnome()?></p>
-<p>E-mail:<?=$cliente1->getemail()?></p>
-<p>Senha:<?=$cliente1->getsenha()?></p>
+<p>Nome:<?=$cliente1->getNome()?></p>
+<p>E-mail:<?=$cliente1->getEmail()?></p>
+<p>Senha:<?=$cliente1->getSenha()?></p>
 
 <pre><?=var_dump($cliente1)?></pre>
 </body>
