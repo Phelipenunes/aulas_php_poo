@@ -1,5 +1,6 @@
 <?php
-class Cliente{
+// classe abstract torna as subs classes obrigatorias
+abstract class Cliente{
     
     private string $nome;
     private string $email;
