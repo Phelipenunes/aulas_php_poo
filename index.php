@@ -38,11 +38,15 @@ $clientePJ->setNomefantasia(" Bla bla bla informática");
 <p></p>
 <pre><?=var_dump($clientePJ)?></pre>   
 <hr>
-<?php
-require_once "src/Cliente.php";
-$clientegenerico = new cliente;
 
+<?php
+require_once "src/MEI.php";
+$clientemei = new MEI;
+$clientemei->setNome("Phelipe");
+$clientemei->setAnofundacao(2023);
+$clientemei->setAreadeatuacao("Ervas medicinais");
+$clientemei->setNomefantasia("Faz o L");
 ?>
-<pre><?=var_dump($clientePJ)?></pre>   
+<pre><?=var_dump($clientemei)?></pre>  
 </body>
 </html>
