@@ -37,8 +37,10 @@ class PessoaJuridica extends Cliente {
    }
 
    public function exibirdados():void{
-        echo"<h3>Método exibir dados - Classe PessoaJuridica</h3>";
-        echo"<h4>".$this->getNome()."</h4>";
-        echo"<p>".$this->getNomefantasia()."</p>";
+        //parent::recursos
+        //permite o acesso aos recursos da classe pai (superclasse)
+    
+        parent::exibirdados();
+        echo"<p>Nome fantasia: ".$this->getNomefantasia()."</p>";
    } 
 }
