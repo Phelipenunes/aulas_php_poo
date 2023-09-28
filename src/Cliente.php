@@ -9,8 +9,8 @@ abstract class Cliente{
 
     //Exibir dados  
     public function exibirdados():void{
-        echo"<h2>Método exibirDados - Classe cliente";
-        echo"<h3> $this->nome </h3>";
+        echo"<h3>Método exibirDados - Classe cliente</h3>";
+        echo"<h4> $this->nome </h4>";
         echo"<p>Situação: $this->situacao </p>";
     }
     

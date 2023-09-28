@@ -33,6 +33,12 @@ $clientePJ->setNomefantasia(" Bla bla bla informática");
 ?>
 <pre><?=var_dump($clientePF)?></pre> 
 <p></p>
-<pre><?=var_dump($clientePJ)?></pre>    
+<pre><?=var_dump($clientePJ)?></pre>
+
+<hr>
+<h2>Saída de dados</h2>
+
+<section><?=$clientePF->exibirdados()?></section>
+<section><?=$clientePJ->exibirdados()?></section>
 </body>
 </html>

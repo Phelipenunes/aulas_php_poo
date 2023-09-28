@@ -35,4 +35,10 @@ class PessoaJuridica extends Cliente {
     public function __construct(){
         $this->setSituacao("Verificar");    
    }
+
+   public function exibirdados():void{
+        echo"<h3>Método exibir dados - Classe PessoaJuridica</h3>";
+        echo"<h4>".$this->getNome()."</h4>";
+        echo"<p>".$this->getNomefantasia()."</p>";
+   } 
 }
