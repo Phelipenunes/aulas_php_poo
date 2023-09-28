@@ -6,6 +6,13 @@ abstract class Cliente{
     private string $email;
     private string $senha;
     private string $situacao =  "a definir" ;
+
+    //Exibir dados  
+    public function exibirdados():void{
+        echo"<h2>Método exibirDados - Classe cliente";
+        echo"<h3> $this->nome </h3>";
+        echo"<p>Situação: $this->situacao </p>";
+    }
     
     //nome
     public function setNome(string $nome):void{
