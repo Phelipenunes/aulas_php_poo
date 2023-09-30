@@ -6,41 +6,37 @@
     <title>Exemplo 7</title>
 </head>
 <body>
-    <h1>PHP com POO - exemplo 7</h1>
+    <h1>PHP com POO - exemplo 8</h1>
     <hr>
     <h2>Assuntos aboradados:</h2>
     <ul>
-        <li>Polimorfismo</li>
-        <li>Sobreposição de métodos</li>
-        <li>Uso geral <code> parent </code> para acessar a superclasse</li>
+        <li>Recursos estáticos</li>
+        <li>Acesso direto sem nescessidade de objetos/instancias</li>
+        <li>Uso do <code>self</code> para acesso (dentro da classe) aos recursos estáticos</li>
     </ul>
 <?php
 require_once "src/PessoaFisica.php";
-require_once "src/PessoaJuridica.php";
-$clientePF = new PessoaFisica;
-$clientePJ = new PessoaJuridica;
+$cliente1 = new PessoaFisica;
+$cliente1->setNome("Pilip");
+$cliente1->setIdade(19);
 
-$clientePF->setNome("Phelipe");
-$clientePF->setEmail("Phelipe@gmail.com");
-$clientePF->setSenha("Phelipe123");
-$clientePF->setCpf("443-415-779-78");
-$clientePF->setIdade(19);
+$cliente2 = new PessoaFisica;
+$cliente2->setNome("Victor");
+$cliente2->setIdade(61);
 
-
-$clientePJ->setNome("beltrano S/A");
-$clientePJ->setEmail("blablabla@gmail.com");
-$clientePJ->setAnofundacao(2000);
-$clientePJ->setCnpj("32.088.0001/000.41");
-$clientePJ->setNomefantasia(" Bla bla bla informática");
+require_once "src/Utilitarios.php";
+Utilitarios::ObterData();
 ?>
-<pre><?=var_dump($clientePF)?></pre> 
-<p></p>
-<pre><?=var_dump($clientePJ)?></pre>
+
+<h2>Atendimentos do dia:</h2>
+<?=Utilitarios::$data_atual?>
+
+<h3>Cliente: <?=$cliente1->getNome()?></h3>
+<p>tipo de atedimento:<?=Utilitarios::definirAtendimento($cliente1->getIdade())?></p>
 
 <hr>
-<h2>Saída de dados</h2>
 
-<section><?=$clientePF->exibirdados()?></section>
-<section><?=$clientePJ->exibirdados()?></section>
+<h3>Cliente: <?=$cliente2->getNome()?></h3>
+<p>tipo de atedimento:<?=Utilitarios::definirAtendimento($cliente2->getIdade())?></p>
 </body>
 </html>
